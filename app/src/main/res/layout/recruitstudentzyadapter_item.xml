@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        >
+            <TextView
+                android:id="@+id/recruitstudentzyadapter_name_tv"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="应用电子"
+                android:textColor="@color/jxhd_tv1color"
+                android:textSize="@dimen/textSize_16"
+                android:padding="@dimen/common_10"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_10"
+                />
+
+        <LinearLayout
+            android:layout_toRightOf="@id/recruitstudentzyadapter_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            >
+            <TextView
+                android:id="@+id/recruitstudentzyadapter_zytype_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="应用电子"
+                android:textColor="@color/jxhd_tv1color"
+                android:textSize="@dimen/textSize_14"
+                android:padding="@dimen/common_10"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_10"
+                />
+            <TextView
+                android:id="@+id/recruitstudentzyadapter_zyxz_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="应用电子"
+                android:textColor="@color/jxhd_tv1color"
+                android:textSize="@dimen/textSize_14"
+                android:padding="@dimen/common_10"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_10"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

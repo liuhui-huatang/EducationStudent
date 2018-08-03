@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.htcompany.education.studentforgansu">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_meng"
+        android:label="@string/app_name"
+        android:name=".commonpart.MyApp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".mainpart.activity.WelcomActivity"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".mainpart.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <!-- 学生报名介绍界面 -->
+        <activity android:name=".recruitstudent.RecruitStudentActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 报名录入界面 -->
+        <activity android:name=".recruitstudent.activity.RecruitStudentBMActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 报名录入界面 -->
+        <activity android:name=".recruitstudent.activity.ZsItemSelectorActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 学生专业介绍列表界面 -->
+        <activity android:name=".recruitstudent.activity.ZyJsListActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 学生专业介绍详情界面 -->
+        <activity android:name=".recruitstudent.activity.ZyJsDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+
+        <!-- 教师评教 -->
+        <activity
+            android:name=".mainpart.activity.TeacherEvaluationActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 教师评教详情页 -->
+        <activity
+            android:name=".mainpart.activity.TeacherEvaluationDetialsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 个人主页信息 -->
+        <activity
+            android:name=".mainpart.activity.PersonageActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 个人基本信息 -->
+        <activity
+            android:name=".mainpart.activity.PersonInfomationActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 我的成绩 -->
+        <activity
+            android:name=".mainpart.activity.MyExamResultsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 体检体质信息 -->
+        <activity
+            android:name=".mainpart.activity.BodyCheckedActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 我的选修课 -->
+        <activity
+            android:name=".mainpart.activity.MyElectiveActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 班级功能信息 -->
+        <activity
+            android:name=".mainpart.activity.ClassFuctionActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 我的班级信息 -->
+        <activity
+            android:name=".mainpart.activity.MyClassMssageActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 我的班级课表 -->
+        <activity
+            android:name=".mainpart.activity.ClassTimetableActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 班级公告 -->
+        <activity
+            android:name=".mainpart.activity.ClassAnnouncementActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 学生公告 -->
+        <activity
+            android:name=".mainpart.activity.StudentAnnouncementActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 公告详情 -->
+        <activity
+            android:name=".mainpart.activity.AnnouncementDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 班级通讯录 -->
+        <activity
+            android:name=".mainpart.activity.ClassTxlActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 我的评价功能界面 -->
+        <activity
+            android:name=".mainpart.activity.EvaluateFuctionActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 综合素质评价 -->
+        <activity
+            android:name=".mainpart.activity.OverallQualityEvaluationActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 学期评语 -->
+        <activity
+            android:name=".mainpart.activity.TermsRemarkActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 毕业评语 -->
+        <activity
+            android:name=".mainpart.activity.GraduatedCommentsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 操行自我评定 -->
+        <activity
+            android:name=".mainpart.activity.ConductEvaluationActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 奖惩记录 -->
+        <activity
+            android:name=".mainpart.activity.PrizeInfoActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 自我教育 -->
+        <activity
+            android:name=".mainpart.activity.MyselfEducationActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 自我教育添加 -->
+        <activity
+            android:name=".mainpart.activity.MyselfEducationDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园事宜功能页 -->
+        <activity
+            android:name=".mainpart.activity.SchoolThingsFuctionActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园投票 -->
+        <activity
+            android:name=".mainpart.activity.SchollVotingActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园投票详情 -->
+        <activity
+            android:name=".mainpart.activity.SchollVotingDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <!-- 资产报修 -->
+        <activity
+            android:name=".mainpart.activity.AssetRepairActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 添加资产报修 -->
+        <activity
+            android:name=".mainpart.activity.AssetRepairAddActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 添加资产报修 -->
+        <activity
+            android:name=".mainpart.activity.AssetMaintenanceDetialsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 假期要事记录 -->
+        <activity
+            android:name=".mainpart.activity.HolidayImportantActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 添加假期要事记录 -->
+        <activity
+            android:name=".mainpart.activity.HolidayImportantAddActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 技能大赛 -->
+        <activity
+            android:name=".mainpart.activity.SkillsGameActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 技能大赛详情 -->
+        <activity
+            android:name=".mainpart.activity.SkillsGameDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 请假功能界面 -->
+        <activity
+            android:name=".mainpart.activity.LeaveApplyFuctionActivity"
+            android:screenOrientation="portrait"
+            >
+            </activity>
+        <!-- 请假记录记录 -->
+        <activity
+            android:name=".mainpart.activity.MyLeaveApplyActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 请假申请 -->
+        <activity
+            android:name=".mainpart.activity.MyLeaveApplyAddActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 奖学金 -->
+        <activity
+            android:name=".mainpart.activity.ScholarshipActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 我的资助功能界面 -->
+        <activity
+            android:name=".mainpart.activity.SubsidizeFunctionActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 助学金 -->
+        <activity
+            android:name=".mainpart.activity.StudentFinancialActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 助学金申请 -->
+        <activity
+            android:name=".mainpart.activity.StudentFinancialApplyActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 临时困难补助 -->
+        <activity
+            android:name=".mainpart.activity.TemporaryHardshipGrantsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 临时困难补助申请 -->
+        <activity
+            android:name=".mainpart.activity.TemporaryHardshipGrantsApplyActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <!-- 免学费 -->
+        <activity
+            android:name=".mainpart.activity.TuitionWaiverActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 助学贷款 -->
+        <activity
+            android:name=".mainpart.activity.StudentLoansActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 助学贷款申请 -->
+        <activity
+            android:name=".mainpart.activity.StudentLoansApplyActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 企业功能信息页 -->
+        <activity
+            android:name=".mainpart.activity.CompanyFunctionActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 企业信息 -->
+        <activity
+            android:name=".mainpart.activity.CommpanyInformationActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 企业信息详情 -->
+        <activity
+            android:name=".mainpart.activity.CommpanyInformationDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 实习记录 -->
+        <activity
+            android:name=".mainpart.activity.InternshipRecordActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 就业记录 -->
+        <activity
+            android:name=".mainpart.activity.EmploymentRecordActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 已报名企业招聘岗位 -->
+        <activity
+            android:name=".mainpart.activity.AlreadyApplyJobsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 图书功能信息页 -->
+        <activity
+            android:name=".mainpart.activity.BooksFuctionActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园图书 -->
+        <activity
+            android:name=".mainpart.activity.SchoolBooksActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园图书类型 -->
+        <activity
+            android:name=".mainpart.activity.BooksTypesActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园图书详情 -->
+        <activity
+            android:name=".mainpart.activity.BooksDetiasActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <!-- 校园图书预定 -->
+        <activity
+            android:name=".mainpart.activity.SchoolBookReserveActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园图书预定详情 -->
+        <activity
+            android:name=".mainpart.activity.SchoolBookReserveDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园论坛界面 -->
+        <activity
+            android:name=".mainpart.activity.ShoolsForumListActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园论坛界面 -->
+        <activity
+            android:name=".mainpart.activity.H5LunTanActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园论坛详情界面 -->
+        <activity
+            android:name=".mainpart.activity.ShoolsForumDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园论坛评论界面 -->
+        <activity
+            android:name=".mainpart.activity.ShoolsForumCommentListActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 校园论坛发布界面 -->
+        <activity
+            android:name=".mainpart.activity.ShoolsForumAddCommentActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 教学互动界面 -->
+        <activity
+            android:name=".mainpart.activity.TeachingInteractionActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 教学互动问题添加界面 -->
+        <activity
+            android:name=".mainpart.activity.TeachingInteractionAddActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 教学互动详情界面 -->
+        <activity
+            android:name=".mainpart.activity.TeachingInteractionDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 技能鉴定界面 -->
+        <activity
+            android:name=".mainpart.activity.SkillsAuthenticateActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 技能鉴定详情界面 -->
+        <activity
+            android:name=".mainpart.activity.SkillsAuthenticateDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 德育新闻界面 -->
+        <activity
+            android:name=".mainpart.activity.DeYuManageActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 德育新闻详情界面 -->
+        <activity
+            android:name=".mainpart.activity.MainNewsDetailsActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- 设置界面 -->
+        <activity android:name=".mainpart.activity.SettingActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- ********************************************环信聊天界面************************************************* -->
+        <activity
+            android:name=".chatpart.ui.ChatActivity"
+            >
+        </activity>
+        <activity
+            android:name=".chatpart.ui.VoiceCallActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".chatpart.ui.VideoCallActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <!-- ********************************************极光推送部分************************************************* -->
+        <!-- Rich push 核心功能 since 2.0.6-->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:theme="@style/MyDialogStyle"
+            android:exported="false">
+        </activity>
+
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.htcompany.education.studentforgansu" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.htcompany.education.studentforgansu" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.htcompany.education.studentforgansu" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="com.htcompany.education.studentforgansu.appservice.MyReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.htcompany.education.studentforgansu" />
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <!--<meta-data android:name="JPUSH_APPKEY" android:value="5c9d5a04fd70ccc65c0fb463" /> &lt;!&ndash;  </>值来自开发者平台取得的AppKey&ndash;&gt;-->
+        <!--<meta-data android:name="JPUSH_APPKEY" android:value="57f7d643f2524b28d41ea836" /> &lt;!&ndash;  </>值来自开发者平台取得的AppKey&ndash;&gt;-->
+        <meta-data android:name="JPUSH_APPKEY" android:value="5e37fd0bdc839d04c7bf1231" /> <!--  </>值来自开发者平台取得的AppKey-->
+
+
+
+        <!-- ********************************************极光推送部分************************************************* -->
+
+        <!-- 设置环信应用的AppKey -->
+        <!--<meta-data android:name="EASEMOB_APPKEY"  android:value="wts888#wtsjiaoyuyun" />
+        <meta-data android:name="EASEMOB_APPKEY"  android:value="w1199170816178952#haoyi-school" />-->
+
+        <!-- 声明SDK所需的service SDK核心功能-->
+        <service android:name="com.hyphenate.chat.EMChatService" android:exported="true"/>
+        <service android:name="com.hyphenate.chat.EMJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"
+            />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+
+    <permission
+        android:name="com.htcompany.education.studentforgansu.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.htcompany.education.studentforgansu.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+</manifest>

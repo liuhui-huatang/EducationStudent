@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/activity_bg_color"
+    >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/titlebar_bg"
+        >
+        <!-- 返回按钮 -->
+        <RelativeLayout
+            android:id="@+id/company_reback_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            >
+            <ImageView
+                android:id="@+id/reback_btn_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/personage_tab_btn"
+                />
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/commpanys_name_edt"
+            android:layout_toRightOf="@id/company_reback_btn"
+            android:layout_marginRight="@dimen/common_50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/company_shape_btn"
+            android:drawableLeft="@mipmap/search_bar_icon_normal"
+            android:drawablePadding="@dimen/common_5"
+            android:hint="请输入岗位名称"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_12"
+            android:paddingTop="@dimen/common_10"
+            android:paddingBottom="@dimen/common_10"
+            android:paddingLeft="@dimen/common_10"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <com.htcompany.education.studentforgansu.commonpart.views.xlistview.XListView
+        android:id="@+id/commpanyinformation_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"
+        />
+</LinearLayout>

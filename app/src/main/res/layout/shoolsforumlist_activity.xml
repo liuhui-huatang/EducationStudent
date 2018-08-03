@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/common_title_bar"
+        />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/shoolsforumcomment_swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+     <com.htcompany.education.studentforgansu.commonpart.views.PullMoreListView
+         android:id="@+id/shoolsforumlist_lv"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:dividerHeight="0dp"
+         android:divider="#00000000"
+         />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'com.huatang.haoyi'
+            keyPassword 'haoyi123'
+            storeFile file('E:/student/HaoYiProject 2/haoyiapp/Eductaion_Student/app/haoyi.jks')
+            storePassword 'haoyi123'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.htcompany.education.studentforgansu"
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0.1"
+        multiDexEnabled true
+
+    }
+    sourceSets.main {
+        jniLibs.srcDirs = ['libs']
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release  //添加release签名
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+
+            android.applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def file = output.outputFile
+                    if (file != null && file.name.endsWith('.apk')) {
+                        outputFileName = "甘工职院校园通—学生端_v${defaultConfig.versionName}.apk"
+                    }
+
+                }
+            }
+
+        }
+
+    }
+    //解决v4包冲突
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v4'
+        all*.exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dexOptions {
+        incremental true
+    }
+    productFlavors {
+    }
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], exclude: 'android-support-multidex.jar', dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile('com.android.support:appcompat-v7:22.2.0') {
+        exclude group: "com.android.support", module: "support-v4"
+    }
+    compile project(':easeui')
+    compile('com.android.support:design:22.2.1') {
+        exclude group: "com.android.support", module: "support-v4"
+    }
+    compile('com.android.support:recyclerview-v7:22.2.0') {
+        exclude group: "com.android.support", module: "support-v4"
+    }
+    compile('com.android.support:cardview-v7:22.2.0') {
+        exclude group: "com.android.support", module: "support-v4"
+    }
+    compile files('libs/nineoldandroids-library-2.4.0.jar')
+    compile('com.makeramen:roundedimageview:2.2.1') {
+        exclude group: "com.android.support", module: "support-v4"
+    }
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/jpush-android-2.1.9.jar')
+    compile files('libs/parse-android-1.13.0.jar')
+    compile files('libs/bolts-tasks-1.4.0.jar')
+    compile files('libs/umeng-analytics-v5.2.4.jar')
+    compile files('libs/fastjson-1.1.34.android.jar')
+    //    compile 'com.google.android:multidex:0.1'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.contrarywind:Android-PickerView:3.2.5'
+}

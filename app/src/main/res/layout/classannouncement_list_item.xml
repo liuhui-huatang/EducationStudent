@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/calssgg_itemtime_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6月25 18:16"
+            android:gravity="center"
+            android:textColor="#777779"
+            android:layout_marginTop="@dimen/common_5"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/common_10"
+            android:background="@drawable/rewards_border_shape"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/common_10"
+                >
+                <ImageView
+                    android:id="@+id/classgg_itemtp_img"
+                    android:layout_width="@dimen/common_70"
+                    android:layout_height="@dimen/common_70"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/common_10"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/classnotice_icon1" />
+                <LinearLayout
+                    android:layout_toRightOf="@id/classgg_itemtp_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    >
+                    <TextView
+                        android:id="@+id/calssgg_itemtitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2016年放寒假通知"
+                        android:textColor="#3e3e3e"
+                        android:textSize="@dimen/textSize_16"
+                        android:padding="@dimen/common_10"
+                        />
+                    <TextView
+                        android:id="@+id/calssgg_itemcontent_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="现在讲本学院放假通知安排如下："
+                        android:padding="@dimen/common_10"
+                        android:textColor="#858585"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textSize_14" />
+                </LinearLayout>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/login_line_bg"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_15"
+                    android:text="查看详情"
+                    android:textColor="#3dcab1"
+                    android:textSize="@dimen/textSize_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/common_15"
+                    android:text=">"
+                    android:textColor="#3dcab1"
+                    android:textSize="@dimen/textSize_18" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

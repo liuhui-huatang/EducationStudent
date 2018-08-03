@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/content_center_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_150"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/jnds_list_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_10"
+                    android:text="大家来谈一下对篮球赛的感觉..."
+                    android:textColor="@color/xyltxq_tvcolor"
+                    android:textSize="@dimen/textSize_16" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/common_10"
+                        android:text="楼主：小明同学•"
+                        android:textColor="@color/xyltxq_tv2color"
+                        android:textSize="@dimen/textSize_12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/common_5"
+                        android:text="一天前"
+                        android:textColor="@color/title_bar_color"
+                        android:textSize="@dimen/textSize_12" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_10"
+                    android:text="        最近快半个月没写博客，不是偷懒而是在整理一些思路，最近的项目中开始尝试使用新框架，也一直在改进中，最后觉得差不多了准备开源出来。10分钟开发网易新闻首页有点夸大其词，但是在我的Demo中修改一下样式基本就能满足大多数新闻客户端的需求了，其他的APP更不在话下。"
+                    android:textColor="@color/xyltxq_tv3color"
+                    android:textSize="@dimen/textSize_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_10"
+                    android:text="        最近快半个月没写博客，不是偷懒而是在整理一些思路，最近的项目中开始尝试使用新框架，也一直在改进中，最后觉得差不多了准备开源出来。10分钟开发网易新闻首页有点夸大其词，但是在我的Demo中修改一下样式基本就能满足大多数新闻客户端的需求了，其他的APP更不在话下。"
+                    android:textColor="@color/xyltxq_tv3color"
+                    android:textSize="@dimen/textSize_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_10"
+                    android:text="        最近快半个月没写博客，不是偷懒而是在整理一些思路，最近的项目中开始尝试使用新框架，也一直在改进中，最后觉得差不多了准备开源出来。10分钟开发网易新闻首页有点夸大其词，但是在我的Demo中修改一下样式基本就能满足大多数新闻客户端的需求了，其他的APP更不在话下。"
+                    android:textColor="@color/xyltxq_tv3color"
+                    android:textSize="@dimen/textSize_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_10"
+                    android:text="        最近快半个月没写博客，不是偷懒而是在整理一些思路，最近的项目中开始尝试使用新框架，也一直在改进中，最后觉得差不多了准备开源出来。10分钟开发网易新闻首页有点夸大其词，但是在我的Demo中修改一下样式基本就能满足大多数新闻客户端的需求了，其他的APP更不在话下。"
+                    android:textColor="@color/xyltxq_tv3color"
+                    android:textSize="@dimen/textSize_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_10"
+                    android:text="        最近快半个月没写博客，不是偷懒而是在整理一些思路，最近的项目中开始尝试使用新框架，也一直在改进中，最后觉得差不多了准备开源出来。10分钟开发网易新闻首页有点夸大其词，但是在我的Demo中修改一下样式基本就能满足大多数新闻客户端的需求了，其他的APP更不在话下。"
+                    android:textColor="@color/xyltxq_tv3color"
+                    android:textSize="@dimen/textSize_14" />
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/shoolsforumdetailbottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_0.5"
+                android:background="@color/login_line_bg"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/common_5"
+                android:scaleType="fitXY"
+                android:src="@mipmap/xylt_pl_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_5"
+                android:text="评论(123)"
+                android:textColor="@color/xyltxq_tv4color"
+                android:textSize="@dimen/textSize_10" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

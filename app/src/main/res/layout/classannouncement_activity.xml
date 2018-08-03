@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="#e9efef"
+    >
+    <include
+        layout="@layout/common_title_bar"
+        />
+    <com.htcompany.education.studentforgansu.commonpart.views.xlistview.XListView
+        android:id="@+id/classgg_recy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:divider="#00000000"
+        />
+</LinearLayout>

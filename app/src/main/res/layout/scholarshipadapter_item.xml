@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/jxj_mc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/common_10"
+                android:paddingRight="@dimen/common_10"
+                android:paddingTop="@dimen/common_15"
+                android:paddingBottom="@dimen/common_15"
+                android:text="科技创新奖(2012566)"
+                android:textColor="@color/jxj_titlecolor"
+                android:textSize="@dimen/textSize_16" />
+
+            <TextView
+                android:id="@+id/jxj_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/jxj_mc_tv"
+                android:background="@drawable/jxj_status_shape"
+                android:paddingLeft="@dimen/common_5"
+                android:paddingRight="@dimen/common_5"
+                android:paddingTop="@dimen/common_3"
+                android:paddingBottom="@dimen/common_3"
+                android:text="已录入"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_12" />
+
+            <TextView
+                android:id="@+id/jxj_term_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:padding="@dimen/common_10"
+                android:text="2016-2017第一学期"
+                android:textColor="@color/jxj_smallcolor"
+                android:textSize="@dimen/textSize_10" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/common_10"
+            android:layout_marginRight="@dimen/common_10"
+            android:background="@color/login_line_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/jxj_leve_tv"
+                android:layout_width="@dimen/common_100"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="一等奖"
+                android:textColor="@color/jxj_djcolor"
+                android:textSize="@dimen/textSize_18"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/common_10"
+                        android:paddingRight="@dimen/common_10"
+                        android:paddingTop="@dimen/common_15"
+                        android:paddingBottom="@dimen/common_15"
+                        android:text="奖学金类型"
+                        android:textColor="@color/jxj_smallcolor"
+                        android:textSize="@dimen/textSize_14" />
+
+                    <TextView
+                        android:id="@+id/jxj_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:padding="@dimen/common_10"
+                        android:text="科技创新奖"
+                        android:textColor="#334864"
+                        android:textSize="@dimen/textSize_14" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/login_line_bg" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="@dimen/common_100"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:paddingBottom="@dimen/common_15"
+                android:paddingTop="@dimen/common_15"
+                android:text="奖学金等级"
+                android:textColor="@color/jxj_smallcolor"
+                android:textSize="@dimen/textSize_12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/common_10"
+                        android:paddingRight="@dimen/common_10"
+                        android:paddingTop="@dimen/common_15"
+                        android:paddingBottom="@dimen/common_15"
+                        android:text="奖励金额"
+                        android:textColor="@color/jxj_smallcolor"
+                        android:textSize="@dimen/textSize_14" />
+
+                    <TextView
+                        android:id="@+id/jxj_money_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:padding="@dimen/common_10"
+                        android:text="5000元"
+                        android:textColor="#334864"
+                        android:textSize="@dimen/textSize_14" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

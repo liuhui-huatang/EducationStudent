@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    >
+    <include
+    layout="@layout/common_title_bar"
+    />
+    <TextView
+        android:id="@+id/zydetails_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_15"
+        android:text="标题"
+        android:textSize="@dimen/textSize_20"
+        android:textColor="#333"
+        />
+    <WebView
+        android:id="@+id/zyjsdetial_wb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        />
+</LinearLayout>

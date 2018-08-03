@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/main_leftchild_tv"
+            android:layout_width="@dimen/common_10"
+            android:layout_height="@dimen/common_10"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="100dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/main_leftchild_shape1"
+            />
+        <TextView
+            android:id="@+id/childitem_name_tv"
+            android:text="小红"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize_12"
+            android:gravity="center"
+            android:padding="@dimen/common_10"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/main_textone_color"
+            />
+    </LinearLayout>
+</LinearLayout>

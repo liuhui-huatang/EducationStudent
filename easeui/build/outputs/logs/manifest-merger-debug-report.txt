@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml:2:1-6:12
+INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml:2:1-6:12
+INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml:2:1-6:12
+	package
+		ADDED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml:3:5-35
+		INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+		INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml:2:11-69
+uses-sdk
+INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+		ADDED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+		INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+		ADDED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml
+		INJECTED from E:\student\HaoYiProject 2\haoyiapp\Eductaion_Student\easeui\AndroidManifest.xml

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/activity_bg_color"
+    >
+    <include layout="@layout/common_title_bar" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/shoolsforumcommentlist_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/ltpllist_lines_inset"
+            android:dividerHeight="0.5dp"
+            />
+        <LinearLayout
+            android:id="@+id/forumcommentbottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/common_0.5"
+               android:background="@color/login_line_bg"
+               />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/common_5"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ltpl_add_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_5"
+                android:text="添加评论"
+                android:textColor="@color/xyltxq_tv4color"
+                android:textSize="@dimen/textSize_10" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

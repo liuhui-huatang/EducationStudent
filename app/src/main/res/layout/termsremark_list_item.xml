@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_20"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/termsremark_bottomline_tv"
+                android:layout_width="@dimen/common_2.5"
+                android:layout_height="@dimen/common_180"
+                android:layout_marginLeft="16dp"
+                android:background="@color/white" />
+            <RelativeLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/oqe_white_shape"
+                >
+                <LinearLayout
+                    android:layout_width="@dimen/common_30"
+                    android:layout_height="@dimen/common_30"
+                    android:background="@drawable/oqe_itemone_shape"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/termremark_month_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="六月"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/termremark_day_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7日"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_8"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_170"
+            android:background="@mipmap/term_py_bg"
+            android:layout_marginRight="@dimen/common_20"
+            android:layout_marginTop="@dimen/common_5"
+            android:layout_toRightOf="@id/termsremark_bottomline_tv"
+            android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_10"
+                    android:layout_marginRight="@dimen/common_10"
+                    android:layout_marginTop="@dimen/common_3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/termremark_xq_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/common_10"
+                            android:text="第一学期"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textSize_14" />
+
+                        <TextView
+                            android:id="@+id/termremark_pjr_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/common_10"
+                            android:text="评价人:小芳"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textSize_14" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/login_line_bg" />
+
+                    <TextView
+                        android:id="@+id/termremark_content_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/common_10"
+                        android:text="这学期睡的不怎么舒服！"
+                        android:textColor="@color/main_textone_color"
+                        android:textSize="@dimen/textSize_14" />
+                </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
