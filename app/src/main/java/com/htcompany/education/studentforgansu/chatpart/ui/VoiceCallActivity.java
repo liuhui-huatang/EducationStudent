@@ -111,9 +111,9 @@ public class VoiceCallActivity extends CallActivity implements OnClickListener {
         String nickname="";
         //根据换新id 循环通讯录获取名称跟头像
         for(ClassTxlEntity entity: MyApp.contactsEntities){
-            if(username.equals(entity.getHxuser())){
+            //if(username.equals(entity.getHxuser())){
                 nickname=entity.getTruename();
-            }
+            //}
         }
 		nickTextView.setText(nickname);
 		if (!isInComingCall) {// outgoing call

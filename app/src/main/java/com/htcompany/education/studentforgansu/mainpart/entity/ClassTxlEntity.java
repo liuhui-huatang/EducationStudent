@@ -12,8 +12,7 @@ public class ClassTxlEntity implements Serializable{
             private String number;//": "112110",
             private String gender;//": "女",
             private String phone;//": "13261538264",
-            private String hxuser;//": "sttest1",
-            private String hxpassword;//": "123"
+
             private String photos;
 
     public String getPhotos() {
@@ -64,19 +63,10 @@ public class ClassTxlEntity implements Serializable{
         this.phone = phone;
     }
 
-    public String getHxuser() {
-        return hxuser;
-    }
 
-    public void setHxuser(String hxuser) {
-        this.hxuser = hxuser;
-    }
 
-    public String getHxpassword() {
-        return hxpassword;
-    }
 
-    public void setHxpassword(String hxpassword) {
-        this.hxpassword = hxpassword;
-    }
+
+
+
 }

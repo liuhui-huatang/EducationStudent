@@ -73,8 +73,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
                 // TODO Auto-generated method stub
                 sharedPrefUtil.putString("islogin","0");
                 sharedPrefUtil.putString("token","");
-                sharedPrefUtil.putString("hxuser","");
-                sharedPrefUtil.putString("hxpassword","");
+
                 sharedPrefUtil.putString("sname","");
                 sharedPrefUtil.putString("avatar","");
                 sharedPrefUtil.putString("photo","");

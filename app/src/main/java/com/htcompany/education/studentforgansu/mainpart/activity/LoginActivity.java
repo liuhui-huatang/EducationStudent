@@ -136,7 +136,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                         startActivity(new Intent(LoginActivity.this,MainActivity.class));
                         finish();
                          setAlias(sharedPrefUtil.getString("jpuid",""));
-                        // setLogin(sharedPrefUtil.getString("hxuser",""),sharedPrefUtil.getString("hxpassword",""));
+
                     }else{
                         ToastUtil.showToast("请输入正确账号密码",LoginActivity.this);
                         if(waitDialog!=null){
@@ -183,8 +183,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                 // TODO Auto-generated method stub
                 sharedPrefUtil.putString("islogin","0");
                 sharedPrefUtil.putString("token","");
-                sharedPrefUtil.putString("hxuser","");
-                sharedPrefUtil.putString("hxpassword","");
                 sharedPrefUtil.putString("sname","");
                 sharedPrefUtil.putString("avatar","");
                 sharedPrefUtil.putString("photo","");

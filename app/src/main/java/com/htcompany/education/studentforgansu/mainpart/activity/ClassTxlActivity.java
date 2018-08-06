@@ -109,9 +109,9 @@ public class ClassTxlActivity extends BaseActivity implements View.OnClickListen
             MyApp.contactsEntities.clear();
         }
         for(ClassTxlEntity entity:datas){
-            if(!sharedPrefUtil.getString("hxuser","").equals(entity.getHxuser())){
+
                 MyApp.contactsEntities.add(entity);
-            }
+
 
         }
         txlAdapter.notifyDataSetChanged();

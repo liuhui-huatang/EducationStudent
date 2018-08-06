@@ -40,8 +40,8 @@ public class LoginPersoner {
             if("0".equals(status)){
                 String token = jsonObject.getJSONObject("data").getString("token");
                 sharedPrefUtil.putString("token",token);
-                sharedPrefUtil.putString("hxuser",jsonObject.getJSONObject("data").getString("hxuser"));
-                sharedPrefUtil.putString("hxpassword",jsonObject.getJSONObject("data").getString("hxpassword"));
+                //sharedPrefUtil.putString("hxuser",jsonObject.getJSONObject("data").getString("hxuser"));
+               // sharedPrefUtil.putString("hxpassword",jsonObject.getJSONObject("data").getString("hxpassword"));
                 sharedPrefUtil.putString("sname",jsonObject.getJSONObject("data").getString("true_name"));
                 sharedPrefUtil.putString("avatar",jsonObject.getJSONObject("data").getString("avatar"));
                 sharedPrefUtil.putString("photo",jsonObject.getJSONObject("data").getString("photo"));

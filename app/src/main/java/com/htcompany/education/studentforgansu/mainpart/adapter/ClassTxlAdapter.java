@@ -69,7 +69,7 @@ public class ClassTxlAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
                 Intent chatIntent = new Intent(context,ChatActivity.class);
-                chatIntent.putExtra("userId",datas.get(position).getHxuser());
+                chatIntent.putExtra("userId",datas.get(position).getUid());
                 chatIntent.putExtra("username",datas.get(position).getTruename());
                 chatIntent.putExtra("userphoto",InterfaceManager.siteURLIP+datas.get(position).getPhotos());
                context.startActivity(chatIntent);

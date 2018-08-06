@@ -1,19 +1,26 @@
 package com.htcompany.education.studentforgansu.mainpart.activity;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 import com.htcompany.education.studentforgansu.R;
 import com.htcompany.education.studentforgansu.commonpart.BaseActivity;
@@ -172,6 +179,40 @@ public class AssetRepairAddActivity extends BaseActivity implements View.OnClick
         super.onRestart();
     }
     public void photo() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            int checkCallPhonePermission = ContextCompat.checkSelfPermission(AssetRepairAddActivity.this, Manifest.permission.CAMERA);
+            if(checkCallPhonePermission != PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(AssetRepairAddActivity.this,new String[]{Manifest.permission.CAMERA},222);
+                return;
+            }else{
+
+                openCamra();//调用具体方法
+            }
+        } else {
+
+            openCamra();//调用具体方法
+        }
+
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            //就像onActivityResult一样这个地方就是判断你是从哪来的。
+            case 222:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // Permission Granted
+                    openCamra();
+                } else {
+                    // Permission Denied
+                    Toast.makeText(AssetRepairAddActivity.this, "很遗憾你把相机权限禁用了。请务必开启相机权限享受我们提供的服务吧。", Toast.LENGTH_SHORT)
+                            .show();
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+    public void openCamra(){
         Intent openCameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(openCameraIntent, TAKE_PICTURE);
     }
