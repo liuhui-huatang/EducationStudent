@@ -588,8 +588,8 @@
         <!-- ********************************************极光推送部分************************************************* -->
 
         <!-- 设置环信应用的AppKey -->
-        <!--<meta-data android:name="EASEMOB_APPKEY"  android:value="wts888#wtsjiaoyuyun" />
-        <meta-data android:name="EASEMOB_APPKEY"  android:value="w1199170816178952#haoyi-school" />-->
+        <!--<meta-data android:name="EASEMOB_APPKEY"  android:value="wts888#wtsjiaoyuyun" />-->
+        <meta-data android:name="EASEMOB_APPKEY"  android:value="w1199170816178952#haoyi-school" />
 
         <!-- 声明SDK所需的service SDK核心功能-->
         <service android:name="com.hyphenate.chat.EMChatService" android:exported="true"/>

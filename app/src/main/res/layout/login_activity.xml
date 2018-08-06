@@ -141,7 +141,8 @@
                 android:padding="@dimen/common_10"
                 android:text="学生预报名"
                 android:textColor="@color/white"
-                android:textSize="@dimen/textSize_14" />
+                android:textSize="@dimen/textSize_14"
+                android:visibility="invisible"/>
 
             <TextView
                 android:layout_width="@dimen/common_1"

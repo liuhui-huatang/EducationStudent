@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"> 甘工职院校园通—学生端</string>
+    <string name="app_name">掌上校园</string>
     <!-- xListView文字 -->
     <string name="xlv_footer_one">松开载入更多</string>
     <string name="xlv_footer_two">加载更多</string>
