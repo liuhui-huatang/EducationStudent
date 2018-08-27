@@ -52,6 +52,7 @@ import com.htcompany.education.studentforgansu.mainpart.activity.H5LunTanActivit
 import com.htcompany.education.studentforgansu.mainpart.activity.LeaveApplyFuctionActivity;
 import com.htcompany.education.studentforgansu.mainpart.activity.MainNewsDetailsActivity;
 import com.htcompany.education.studentforgansu.mainpart.activity.MyClassMssageActivity;
+import com.htcompany.education.studentforgansu.mainpart.activity.MyWebActivity;
 import com.htcompany.education.studentforgansu.mainpart.activity.PersonageActivity;
 import com.htcompany.education.studentforgansu.mainpart.activity.SchoolThingsFuctionActivity;
 import com.htcompany.education.studentforgansu.mainpart.activity.SettingActivity;
@@ -66,6 +67,8 @@ import com.htcompany.education.studentforgansu.mainpart.entity.TermEntity;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.htcompany.education.studentforgansu.internet.InterfaceManager.siteURLIP;
 
 /**\
  * 程序主页
@@ -108,6 +111,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private MainInternet mainInternet;
     private MainPersener mainPersener;
     private WaitDialog waitDialog;
+    private boolean isnew = false;
     //版本更新
     /**
      * Called when the activity is first created.
@@ -117,8 +121,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inflater = LayoutInflater.from(this);
+        sharedPrefUtil = new SharedPrefUtil(this,"login");
+        isnew = sharedPrefUtil.getBoolean("isnew",false);
         //版本更新
-       // VersionUpdataUtils versionUpdataUtils =new VersionUpdataUtils(this);
+        VersionUpdataUtils versionUpdataUtils =new VersionUpdataUtils(this);
         initData();
         initViews();
         initValues();
@@ -142,6 +148,23 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         }
     }
     public void initViews(){
+        /***
+         *
+         *
+         * new student
+         * ***/
+        if(isnew){
+            TextView tab_title1 = (TextView)findViewById(R.id.tab_title1);
+            TextView tab_title2 = (TextView)findViewById(R.id.tab_title2);
+            TextView tab_title3 = (TextView)findViewById(R.id.tab_title3);
+            TextView tab_title4 = (TextView)findViewById(R.id.tab_title4);
+            tab_title1.setText("迎新进度");
+            tab_title2.setText("新生报到");
+            tab_title3.setText("新生请假");
+            tab_title4.setText("新生转专业");
+        }
+
+
         main_scrollview=(ScrollView)this.findViewById(R.id.main_scrollview);
         title = (TextView)this.findViewById(R.id.title);
         reabck_btn=(RelativeLayout)this.findViewById(R.id.reback_btn);
@@ -259,7 +282,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         main_xzb_tv.setText("行政班:"+sharedPrefUtil.getString("xzb",""));
         XCRoundAndOvalImageView leftmenu_photo_img = (XCRoundAndOvalImageView)lefmenuView.findViewById(R.id.leftmenu_photo_img);
         Glide.with(this)
-                .load(InterfaceManager.siteURLIP+sharedPrefUtil.getString("photo",""))
+                .load(siteURLIP+sharedPrefUtil.getString("photo",""))
                 .placeholder(R.mipmap.defult_photo_icon)
                 .diskCacheStrategy(DiskCacheStrategy.RESULT)
                 .into(leftmenu_photo_img);
@@ -368,23 +391,57 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 break;
             case R.id.main_calsstabletime_rel:
                 //班级课表
-                intent = new Intent(MainActivity.this, ClassTimetableActivity.class);
-                startActivity(intent);
+                if(isnew){
+                    intent = new Intent(MainActivity.this, MyWebActivity.class);
+                    String url = siteURLIP + "/api/rstuSeeFlow";
+                    intent.putExtra("url",url);
+                    intent.putExtra("title","迎新进度");
+                    startActivity(intent);
+                }else{
+                    intent = new Intent(MainActivity.this, ClassTimetableActivity.class);
+                    startActivity(intent);
+                }
+
                 break;
             case R.id.main_classmsg_rel:
                 //班级信息
-                intent = new Intent(MainActivity.this, MyClassMssageActivity.class);
-                startActivity(intent);
+                if(isnew){
+                    intent = new Intent(MainActivity.this, MyWebActivity.class);
+                    String url = siteURLIP + "/api/rstuQiandaoJiekouIndex";
+                    intent.putExtra("url",url);
+                    intent.putExtra("title","新生报到");
+                    startActivity(intent);
+                }else{
+                    intent = new Intent(MainActivity.this, MyClassMssageActivity.class);
+                    startActivity(intent);
+                }
+
                 break;
             case R.id.main_schoolvoting_rel:
-                //班级公告
-                intent = new Intent(MainActivity.this, ClassAnnouncementActivity.class);
-                startActivity(intent);
+                if(isnew){
+                    intent = new Intent(MainActivity.this, MyWebActivity.class);
+                    String url = siteURLIP + "/api/rstuQingjiaJiekouIndex";
+                    intent.putExtra("url",url);
+                    intent.putExtra("title","新生请假");
+                    startActivity(intent);
+                }else {
+                    //班级公告
+                    intent = new Intent(MainActivity.this, ClassAnnouncementActivity.class);
+                    startActivity(intent);
+                }
                 break;
             case R.id.main_schoolannoncement_rel:
                 //学生公告
-                intent = new Intent(MainActivity.this, StudentAnnouncementActivity.class);
-                startActivity(intent);
+                if(isnew){
+                    intent = new Intent(MainActivity.this, MyWebActivity.class);
+                    String url = siteURLIP + "/api/rstuZhuanzyJiekouIndex";
+                    intent.putExtra("url",url);
+                    intent.putExtra("title","新生转专业");
+                    startActivity(intent);
+                }else {
+                    intent = new Intent(MainActivity.this, StudentAnnouncementActivity.class);
+                    startActivity(intent);
+                }
                 break;
             case R.id.main_todayclasstable_rel:
                 //课表（当天课程）
@@ -549,9 +606,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 //            imageView.setImageResource(data);
 //            ImageLoader.getInstance().displayImage(InterfaceManager.siteURLIP+data.getImage(),imageView, MyApp.getOptions());
 
-            Log.e("UpdateUI",InterfaceManager.siteURLIP+data.getImage());
+            Log.e("UpdateUI", siteURLIP+data.getImage());
             Glide.with(context)
-                    .load(InterfaceManager.siteURLIP+data.getImage())
+                    .load(siteURLIP+data.getImage())
                     .placeholder(R.mipmap.bottombg_show_icon)
                     .diskCacheStrategy(DiskCacheStrategy.RESULT)
                     .into(imageView);

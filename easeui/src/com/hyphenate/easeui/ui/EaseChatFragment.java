@@ -197,12 +197,12 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
         	titleBar.setRightImageResource(R.drawable.ease_to_group_details_normal);
             if (chatType == EaseConstant.CHATTYPE_GROUP) {
                 //group chat
-                EMGroup group = EMClient.getInstance().groupManager().getGroup(toChatUsername);
-                if (group != null)
-                    titleBar.setTitle(group.getGroupName());
+              //  EMGroup group = EMClient.getInstance().groupManager().getGroup(toChatUsername);
+              //  if (group != null)
+             //       titleBar.setTitle(group.getGroupName());
                 // listen the event that user moved out group or group is dismissed
                 groupListener = new GroupListener();
-                EMClient.getInstance().groupManager().addGroupChangeListener(groupListener);
+               // EMClient.getInstance().groupManager().addGroupChangeListener(groupListener);
             } else {
                 onChatRoomViewCreation();
             }
@@ -416,7 +416,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
             messageList.refresh();
         EaseUI.getInstance().pushActivity(getActivity());
         // register the event listener when enter the foreground
-        EMClient.getInstance().chatManager().addMessageListener(this);
+      //  EMClient.getInstance().chatManager().addMessageListener(this);
         
         if(chatType == EaseConstant.CHATTYPE_GROUP){
             EaseAtMessageHelper.get().removeAtMeGroup(toChatUsername);
@@ -428,7 +428,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
         super.onStop();
         // unregister this event listener when this activity enters the
         // background
-        EMClient.getInstance().chatManager().removeMessageListener(this);
+      //  EMClient.getInstance().chatManager().removeMessageListener(this);
 
         // remove activity from foreground activity list
         EaseUI.getInstance().popActivity(getActivity());
@@ -439,11 +439,11 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
         super.onDestroy();
 
         if (groupListener != null) {
-            EMClient.getInstance().groupManager().removeGroupChangeListener(groupListener);
+         //   EMClient.getInstance().groupManager().removeGroupChangeListener(groupListener);
         }
 
         if(chatType == EaseConstant.CHATTYPE_CHATROOM){
-            EMClient.getInstance().chatroomManager().leaveChatRoom(toChatUsername);
+          //  EMClient.getInstance().chatroomManager().leaveChatRoom(toChatUsername);
         }
         
         if(chatRoomChangeListener != null){

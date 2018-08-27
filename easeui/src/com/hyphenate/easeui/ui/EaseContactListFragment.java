@@ -97,7 +97,7 @@ public class EaseContactListFragment extends EaseBaseFragment {
 
     @Override
     protected void setUpView() {
-        EMClient.getInstance().addConnectionListener(connectionListener);
+      //  EMClient.getInstance().addConnectionListener(connectionListener);
         
         contactList = new ArrayList<EaseUser>();
         getContactList();
@@ -181,6 +181,7 @@ public class EaseContactListFragment extends EaseBaseFragment {
         pd.setMessage(st1);
         pd.setCanceledOnTouchOutside(false);
         pd.show();
+        /*
         new Thread(new Runnable() {
             public void run() {
                 try {
@@ -204,7 +205,7 @@ public class EaseContactListFragment extends EaseBaseFragment {
                 }
             }
         }).start();
-        
+        */
     }
     
     // refresh ui
@@ -217,7 +218,7 @@ public class EaseContactListFragment extends EaseBaseFragment {
     @Override
     public void onDestroy() {
         
-        EMClient.getInstance().removeConnectionListener(connectionListener);
+      //  EMClient.getInstance().removeConnectionListener(connectionListener);
         
         super.onDestroy();
     }
@@ -233,7 +234,7 @@ public class EaseContactListFragment extends EaseBaseFragment {
         }
         synchronized (this.contactsMap) {
             Iterator<Entry<String, EaseUser>> iterator = contactsMap.entrySet().iterator();
-            List<String> blackList = EMClient.getInstance().contactManager().getBlackListUsernames();
+           /*/ List<String> blackList = EMClient.getInstance().contactManager().getBlackListUsernames();
             while (iterator.hasNext()) {
                 Entry<String, EaseUser> entry = iterator.next();
                 // to make it compatible with data in previous version, you can remove this check if this is new app
@@ -248,7 +249,7 @@ public class EaseContactListFragment extends EaseBaseFragment {
                         contactList.add(user);
                     }
                 }
-            }
+            }*/
         }
 
         // sorting

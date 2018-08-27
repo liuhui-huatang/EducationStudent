@@ -471,6 +471,9 @@
             android:screenOrientation="portrait"
             >
         </activity>
+        <activity android:name=".mainpart.activity.MyWebActivity"
+            android:screenOrientation="portrait"
+            />
         <!-- ********************************************环信聊天界面************************************************* -->
         <activity
             android:name=".chatpart.ui.ChatActivity"

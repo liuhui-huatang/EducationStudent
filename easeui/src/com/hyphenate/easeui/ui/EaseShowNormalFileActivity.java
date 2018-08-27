@@ -64,6 +64,6 @@ public class EaseShowNormalFileActivity extends EaseBaseActivity {
                 });
             }
         });
-        EMClient.getInstance().chatManager().downloadAttachment(message);
+     //   EMClient.getInstance().chatManager().downloadAttachment(message);
 	}
 }

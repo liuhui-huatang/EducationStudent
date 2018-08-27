@@ -115,7 +115,7 @@ public class EaseShowVideoActivity extends EaseBaseActivity{
 				}
 			}
 		});
-		EMClient.getInstance().chatManager().downloadAttachment(message);
+		//EMClient.getInstance().chatManager().downloadAttachment(message);
 	}
 
 	@Override

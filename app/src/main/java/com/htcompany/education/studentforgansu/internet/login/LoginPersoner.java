@@ -49,6 +49,8 @@ public class LoginPersoner {
                 sharedPrefUtil.putString("jxb",jsonObject.getJSONObject("data").getString("jxb"));
                 sharedPrefUtil.putString("xzb",jsonObject.getJSONObject("data").getString("xzb"));
                 sharedPrefUtil.putString("jpuid",jsonObject.getJSONObject("data").getString("jpuid"));
+                sharedPrefUtil.putBoolean("isnew", Boolean.parseBoolean(jsonObject.getJSONObject("data").getString("isnew")));
+                sharedPrefUtil.putString("unkey",jsonObject.getJSONObject("data").getString("unkey"));
                 sharedPrefUtil.commit();
                 //注册激光别名
 //                setAlias(jsonObject.getJSONObject("data").getString("jpuid"));

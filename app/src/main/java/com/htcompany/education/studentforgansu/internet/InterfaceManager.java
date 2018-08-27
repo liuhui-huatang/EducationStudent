@@ -114,7 +114,7 @@ public class InterfaceManager {
              * 、、、、、、、、、、、、、、、、、登录模块 、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
              */
             urlManager.put(InterfaceManager.LUNTAN_BBS, siteURLIP + "/api/user/bbslogin");//论坛路劲
-            urlManager.put(InterfaceManager.lOGIN_LOGIN, siteURLIP + "/api/user/login");//登录
+            urlManager.put(InterfaceManager.lOGIN_LOGIN, siteURLIP + "/api/user/student/login");//登录
             /**
              * 、、、、、、、、、、、、、、、、、个人主页模块、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
              */

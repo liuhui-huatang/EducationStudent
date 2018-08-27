@@ -132,6 +132,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                         sharedPrefUtil.putString("loginname",login_uname_edt.getText().toString().trim());
                         sharedPrefUtil.putString("loginpwd",login_pwd_edt.getText().toString().trim());
                         sharedPrefUtil.putString("islogin","1");
+
                         sharedPrefUtil.commit();
                         startActivity(new Intent(LoginActivity.this,MainActivity.class));
                         finish();

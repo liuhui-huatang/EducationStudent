@@ -96,7 +96,7 @@ public class EaseConversationListFragment extends EaseBaseFragment{
             });
         }
         
-        EMClient.getInstance().addConnectionListener(connectionListener);
+      //  EMClient.getInstance().addConnectionListener(connectionListener);
         
         query.addTextChangedListener(new TextWatcher() {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -205,19 +205,19 @@ public class EaseConversationListFragment extends EaseBaseFragment{
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         +    */
     protected List<EMConversation> loadConversationList(){
         // get all conversations
-        Map<String, EMConversation> conversations = EMClient.getInstance().chatManager().getAllConversations();
+       // Map<String, EMConversation> conversations = EMClient.getInstance().chatManager().getAllConversations();
         List<Pair<Long, EMConversation>> sortList = new ArrayList<Pair<Long, EMConversation>>();
         /**
          * lastMsgTime will change if there is new message during sorting
          * so use synchronized to make sure timestamp of last message won't change.
          */
-        synchronized (conversations) {
+       /* synchronized (conversations) {
             for (EMConversation conversation : conversations.values()) {
                 if (conversation.getAllMessages().size() != 0) {
                     sortList.add(new Pair<Long, EMConversation>(conversation.getLastMessage().getMsgTime(), conversation));
                 }
             }
-        }
+        }*/
         try {
             // Internal is TimSort algorithm, has bug
             sortConversationByLastChatTime(sortList);
@@ -281,7 +281,7 @@ public class EaseConversationListFragment extends EaseBaseFragment{
     @Override
     public void onDestroy() {
         super.onDestroy();
-        EMClient.getInstance().removeConnectionListener(connectionListener);
+       // EMClient.getInstance().removeConnectionListener(connectionListener);
     }
     
     @Override

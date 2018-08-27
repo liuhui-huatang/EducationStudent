@@ -70,6 +70,7 @@
                             android:src="@mipmap/home_btn_1"
                             />
                         <TextView
+                            android:id="@+id/tab_title1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="课程表"
@@ -100,6 +101,7 @@
                             android:src="@mipmap/home_btn_2"
                             />
                         <TextView
+                            android:id="@+id/tab_title2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="班级信息"
@@ -132,6 +134,7 @@
                             android:src="@mipmap/home_btn_3" />
 
                         <TextView
+                            android:id="@+id/tab_title3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="班级公告"
@@ -162,6 +165,7 @@
                             android:src="@mipmap/home_btn_4"
                             />
                         <TextView
+                            android:id="@+id/tab_title4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="学生公告"

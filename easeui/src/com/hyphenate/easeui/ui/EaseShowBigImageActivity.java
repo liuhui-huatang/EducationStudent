@@ -180,11 +180,11 @@ public class EaseShowBigImageActivity extends EaseBaseActivity {
 			}
 		};
 		
-		EMMessage msg = EMClient.getInstance().chatManager().getMessage(msgId);
-		msg.setMessageStatusCallback(callback);
+		//EMMessage msg = EMClient.getInstance().chatManager().getMessage(msgId);
+		//msg.setMessageStatusCallback(callback);
 
-		EMLog.e(TAG, "downloadAttachement");
-		EMClient.getInstance().chatManager().downloadAttachment(msg);
+	//	EMLog.e(TAG, "downloadAttachement");
+	//	EMClient.getInstance().chatManager().downloadAttachment(msg);
 	}
 
 	@Override
